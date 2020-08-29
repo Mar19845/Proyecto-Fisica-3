@@ -79,5 +79,7 @@ Ingrese la opcion que desea usar:  ''')
                 break
             except:
                 print("Ingrese Un valor Valido")
-                
+        
+        #333333333333333
+        print(ParticulaCantidad)
     
