@@ -1,7 +1,7 @@
 #JuanMarroquin 19845
 #Carlos Raxtum 19721
 
-
+import calculos as calcu
 # Cargas a utilizar
 C_neutra = 0 
 C_positiva = 1.6e-19 #medida en C
@@ -21,7 +21,7 @@ dicc_particulas = {"Electron": 9.109e-31,#masas, medida en Kilogramo
                     }
 
 
-print("Hola")
+
 print('''Bienvenido
 Al programa grafica una particula en un campo electrico ''')
 
@@ -60,7 +60,7 @@ Ingrese la opcion que desea usar:  ''')
         
         while True:
             try:
-                ParticulaTipo = int(input("Ingrese opcion"))
+                ParticulaTipo = int(input("Ingrese opcion: "))
                 if ParticulaTipo == 1:
                     #obtener el valor de carga
                     masa = dicc_particulas["Electron"]
@@ -95,10 +95,10 @@ Ingrese la opcion que desea usar:  ''')
                 break
             except:
                 print("Ingrese Una opcion Valida\n")
-        print(masa)
+        print("La masa de la particula seleccionada es: ",masa)
         while True:
             try:
-                ParticulaCantidad = int(input("Ingrese el NUMERO DE PARTIULAS que desea usar:"))
+                ParticulaCantidad = int(input("Ingrese el NUMERO DE PARTIULAS que desea usar: "))
                 break
             except:
                 print("Ingrese Un valor Valido\n")
@@ -132,7 +132,7 @@ Ingrese la opcion que desea usar:  ''')
                 print("Ingrese una de las opciones (1 o 2) para el SENTIDO del CAMPO ELECTRICO: ")
                 print("1. Eje y positivo")
                 print("2. Eje y negativo")
-                CSentido = int(input("Ingrese la opcion"))
+                CSentido = int(input("Ingrese la opcion: "))
                 break
             except:
                 print("Ingrese Un valor Valido\n")
@@ -146,9 +146,10 @@ Ingrese la opcion que desea usar:  ''')
         #ancho del campo
         while True:
             try:
-                CAncho = float(input("Ingrese el ANCHO del CAMPO ELECTRICO:"))
+                CampoLargo = float(input("Ingrese el Largo del CAMPO ELECTRICO: "))
                 break
             except:
                 print("Ingrese Un valor Valido\n")
         #333333333333333
-        print(CAncho)
+        
+        calcu.prueba(1)
