@@ -52,11 +52,11 @@ def Graficar(aceleracion,angulo,velocidad,distancia):
         ax.clear()
         ax.plot(x[:i],y[:i])
         plt.title("Posicion de X contra Y")
-        plt.xlim(min(x),max(x))
+        plt.xlim(min(x),2*max(x))
         plt.ylim(min(y),max(y))
         
     
-    ani = animation.FuncAnimation(fig,actualizar,range(len(x)),interval = 5,repeat = False)
+    ani = animation.FuncAnimation(fig,actualizar,range(len(x)),interval = 20,repeat = False)
     plt.show()
     
 #def Posicion_x (velocidad, angulo, tiempo): #calculo de la posicion en y

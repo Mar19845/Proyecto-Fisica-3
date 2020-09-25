@@ -60,7 +60,7 @@ Ingrese la opcion que desea usar:  ''')
         
         while True:
             try:
-                ParticulaTipo = int(input("Ingrese opcion"))
+                ParticulaTipo = int(input("Ingrese opcion: "))
                 if ParticulaTipo == 1:
                     #obtener el valor de carga
                     masa = dicc_particulas["Electron"]
@@ -115,13 +115,13 @@ Ingrese la opcion que desea usar:  ''')
         #ingreso de los valores de la velociadad inicial
         while True:
             try:
-                velocidad = float(input("Ingrese la VELOCIDAD INICIAL DE LA PARTICULA: "))
+                velocidad = float(input("Ingrese la VELOCIDAD INICIAL DE LA PARTICULA en m/s: "))
                 break
             except:
                 print("Ingrese Un valor Valido\n")
         while True:
             try:
-                angulo = float(input("Ingrese EL ANGULO DE DISPARO DE 0 A 90 GRADOS: "))
+                angulo = float(input("Ingrese EL ANGULO DE DISPARO en GRADOS: "))
                 break
             except:
                 print("Ingrese Un valor Valido\n")
@@ -132,7 +132,7 @@ Ingrese la opcion que desea usar:  ''')
         #magnitud del campo
         while True:
             try:
-                CMagnitud = float(input("Ingrese la MAGNITUD del CAMPO ELECTRICO: "))
+                CMagnitud = float(input("Ingrese la MAGNITUD del CAMPO ELECTRICO N/C: "))
                 break
             except:
                 print("Ingrese Un valor Valido\n")
@@ -140,8 +140,8 @@ Ingrese la opcion que desea usar:  ''')
         while True:
             try:
                 print("Ingrese una de las opciones (1 o 2) para el SENTIDO del CAMPO ELECTRICO: ")
-                print("1. Eje y positivo")
-                print("2. Eje y negativo")
+                print("1. Eje Y positivo")
+                print("2. Eje Y negativo")
                 CampoSentido = int(input("Ingrese la opcion: "))
                 break
             except:
@@ -156,7 +156,7 @@ Ingrese la opcion que desea usar:  ''')
         #ancho del campo
         while True:
             try:
-                CampoLargo = float(input("Ingrese el Largo del CAMPO ELECTRICO: "))
+                CampoLargo = float(input("Ingrese el Largo del CAMPO ELECTRICO en metros: "))
                 break
             except:
                 print("Ingrese Un valor Valido\n")
