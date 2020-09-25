@@ -56,7 +56,7 @@ def Graficar(aceleracion,angulo,velocidad,distancia):
         plt.ylim(min(y),max(y))
         
     
-    ani = animation.FuncAnimation(fig,actualizar,range(len(x)))
+    ani = animation.FuncAnimation(fig,actualizar,range(len(x)),interval = 5,repeat = False)
     plt.show()
     
 #def Posicion_x (velocidad, angulo, tiempo): #calculo de la posicion en y
