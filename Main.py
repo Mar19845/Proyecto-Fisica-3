@@ -132,7 +132,7 @@ Ingrese la opcion que desea usar:  ''')
                 print("Ingrese una de las opciones (1 o 2) para el SENTIDO del CAMPO ELECTRICO: ")
                 print("1. Eje y positivo")
                 print("2. Eje y negativo")
-                CSentido = int(input("Ingrese la opcion: "))
+                CampoSentido = int(input("Ingrese la opcion: "))
                 break
             except:
                 print("Ingrese Un valor Valido\n")
@@ -150,6 +150,15 @@ Ingrese la opcion que desea usar:  ''')
                 break
             except:
                 print("Ingrese Un valor Valido\n")
-        #333333333333333
+        #Variables y llamado de funciones que ayudan a encontrar la grafica
         
-        calcu.prueba(1)
+        #calculo masa total
+        MasaTotal = masa*ParticulaCantidad
+        #calculo carga total
+        CargaTotal = ParticulaCantidad*C_positiva
+        #calculo campo electrico
+        CampoElectrico = calcu.CampoElec(CMagnitud,CampoSentido)
+        #calculo aceleracion
+        Aceleracion = calcu.Aceleracion(CargaTotal,CampoElectrico,MasaTotal)
+        #graficar
+        calcu.Graficar(Aceleracion,angulo,velocidad,CampoLargo)
