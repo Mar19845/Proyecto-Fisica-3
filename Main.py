@@ -13,12 +13,12 @@ dicc_particulas = {"Electron": 9.109e-31,#masas, medida en Kilogramo
                    "Proton" : 1.675e-27,
                    "Neutron": 1.675e-27,
                    "ParticulaAlfa": 6.696e-27,
-                   "NucleoDeDeuterio": 3.348e-27,
+                   "NeutrinoMuonico": 3.38e-31,
                    "Muon": 1.880e-25,
                    "Antimuon": 1.880e-25,
-                   "sabes": 0, #falta
-                   "saber": 0, #falta
-                    }
+                   "Tauón": 3.167e-27, 
+                   "Antitauón": 3.167e-27, 
+                  } 
 
 
 
@@ -52,45 +52,55 @@ Ingrese la opcion que desea usar:  ''')
         print("3. Proton")
         print("4. Neutron ")
         print("5. Particula alfa ")
-        print("6. Nucleo de Deuterio ")
+        print("6. Neutrino Muonico ")
         print("7. Muon ")
         print("8. Antimuon")
-        print("9. ")
-        print("10. ")
+        print("9. Tauón")
+        print("10. AntiTauón")
         
         while True:
             try:
-                ParticulaTipo = int(input("Ingrese opcion: "))
+                ParticulaTipo = int(input("Ingrese opcion"))
                 if ParticulaTipo == 1:
                     #obtener el valor de carga
                     masa = dicc_particulas["Electron"]
+                    carga = -1.6e-19
                 elif ParticulaTipo == 2:
                     #obtener el valor de carga
                     masa = dicc_particulas["Positron"]
+                    carga = 1.6e-19
                 elif ParticulaTipo == 3:
                     #obtener el valor de carga
                     masa = dicc_particulas["Proton"]
+                    carga = 1.6e-19
                 elif ParticulaTipo == 4:
                     #obtener el valor de carga
                     masa = dicc_particulas["Neutron"]
+                    carga = 0
                 elif ParticulaTipo == 5:
                     #obtener el valor de carga
                     masa = dicc_particulas["ParticulaAlfa"]
+                    carga = 3.2e-19
                 elif ParticulaTipo == 6:
                     #obtener el valor de carga
-                    masa = dicc_particulas["NucleoDeDeuterio"]
+                    masa = dicc_particulas["NeutrinoMuonico"]
+                    carga = -1.6e-19
                 elif ParticulaTipo == 7:
                     #obtener el valor de carga
                     masa = dicc_particulas["Muon"]
+                    carga = -1
                 elif ParticulaTipo == 8:
                     #obtener el valor de carga
                     masa = dicc_particulas["Antimuon"]
+                    carga = +1
                 elif ParticulaTipo == 9:
                     #obtener el valor de carga
-                    masa = dicc_particulas["saber"]
+                    masa = dicc_particulas["Tauón"]
+                    carga = -1
                 elif ParticulaTipo == 10:
                     #obtener el valor de carga
-                    masa = dicc_particulas["saber"]
+                    masa = dicc_particulas["Antitauón"]
+                    carga = +1
                     
                 break
             except:
@@ -155,7 +165,7 @@ Ingrese la opcion que desea usar:  ''')
         #calculo masa total
         MasaTotal = masa*ParticulaCantidad
         #calculo carga total
-        CargaTotal = ParticulaCantidad*C_positiva
+        CargaTotal = ParticulaCantidad*carga
         #calculo campo electrico
         CampoElectrico = calcu.CampoElec(CMagnitud,CampoSentido)
         #calculo aceleracion
