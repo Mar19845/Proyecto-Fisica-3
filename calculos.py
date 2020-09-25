@@ -14,6 +14,7 @@ from mpl_toolkits.mplot3d import Axes3D
 
 fig = plt.figure()
 ax = fig.gca()
+
     
 #funcion que calcula la tangente del angulo
 def tan(grados):
@@ -52,6 +53,8 @@ def Graficar(aceleracion,angulo,velocidad,distancia):
         ax.clear()
         ax.plot(x[:i],y[:i])
         plt.title("Posicion de X contra Y")
+        plt.xlabel("Posicion en X (m)")
+        plt.ylabel("Posicion en Y (m)")
         plt.xlim(min(x),2*max(x))
         plt.ylim(min(y),max(y))
         
