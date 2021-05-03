@@ -46,9 +46,10 @@ def Graficar(aceleracion,angulo,velocidad,distancia):
     tangente = tan(angulo)
     coseno = cos(angulo)
     
-    x = np.linspace(0,distancia,200)
+    x = np.linspace(0,distancia,100)
     y= tangente*x + (aceleracion/(2*(velocidad**2)*(coseno**2)))*(x**2)
     
+    #funcion que se encarga de actualizar los ejes para la animacion
     def actualizar(i):
         ax.clear()
         ax.plot(x[:i],y[:i])
@@ -58,7 +59,7 @@ def Graficar(aceleracion,angulo,velocidad,distancia):
         plt.xlim(min(x),2*max(x))
         plt.ylim(min(y),max(y))
         
-    
+    #variable que se encarga de la animacion
     ani = animation.FuncAnimation(fig,actualizar,range(len(x)),interval = 20,repeat = False)
     plt.show()
     
